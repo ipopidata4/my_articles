@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Testing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HTML Test Page</h1>
+        <p>If you can see this page, HTML is working!</p>
+
+        <input type="text" id="username" placeholder="Enter your name">
+        <br><br>
+
+        <button onclick="showMessage()">Test Button</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            const name = document.getElementById("username").value;
+            document.getElementById("result").textContent =
+                name ? `Hello, ${name}! Testing successful.` : "Testing successful!";
+        }
+    </script>
+</body>
+
+</html>
